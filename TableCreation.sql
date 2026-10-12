@@ -1,5 +1,5 @@
 create database banking;
-use banking;
+use banking; 
 create table Accounts(
 AccountID int primary key,
 AccountType varchar(20),
@@ -84,6 +84,8 @@ add	column AccID int;
 alter table transactions
 add	foreign key(AccID)
 references accounts(AccID);
+ALTER TABLE transactions
+RENAME COLUMN TranactionType TO TransactionType;
 
 alter table loans
 add column  CUSTID int;
@@ -92,9 +94,12 @@ alter table loans
 add	foreign key(CUSTID)
 references customers(CUSTID);
 
+select * from customers;
 desc ACCOUNTS;
 desc TRANSACTIONS;
 desc LOANS;
+desc  branches;
+describe customers;
 
 
 
