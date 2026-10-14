@@ -1,4 +1,4 @@
-select * from customers;
+ select * from customers;
 USE banking;
 select FIRSTNAME,LASTNAME,CUSTID FROM CUSTOMERS;
 select * from customers where DOB
@@ -50,3 +50,32 @@ when Balance< 50000 then "Med Balance"
 else "High Balance"
 end as cat
 from accounts; 
+
+select * from accounts;
+select AccountType, count(AccID) as cnt
+from accounts
+group by AccountType
+having cnt>5;
+
+select * from customers;
+select upper(FIRSTNAME) FROM CUSTOMERS;
+SELECT lower(FIRSTNAME) FROM CUSTOMERS;
+SELECT concat(FIRSTNAME,"_",LASTNAME) FROM CUSTOMERS;
+select * from loans;
+select round(InterestRate) from loans; -- mathematical functions
+select ceil(InterestRate) from loans;
+select abs(-2); -- -ve to +ve
+select mod(25,4); -- gives remainder value
+
+select current_date();
+select now();
+select * from loans;
+select day(StartDate) from loans;
+select abs(datediff(StartDate,Enddate)) from loans;
+select timestampdiff(month,StartDate,Enddate) from loans;
+
+select * from customers;
+select FIRSTNAME,DOB,
+if(year(DOB)<=1995,
+"ADULT","YOUNG") AS CAT
+FROM CUSTOMERS;
