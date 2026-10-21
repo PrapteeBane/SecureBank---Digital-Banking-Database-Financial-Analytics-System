@@ -78,4 +78,4 @@ select * from customers;
 select FIRSTNAME,DOB,
 if(year(DOB)<=1995,
 "ADULT","YOUNG") AS CAT
-FROM CUSTOMERS;
+FROM CUSTOMERS; 
