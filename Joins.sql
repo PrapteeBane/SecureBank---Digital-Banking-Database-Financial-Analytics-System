@@ -29,5 +29,3 @@ on  b.BranchId= a.BranchID
 select c.FIRSTNAME, l.LoanAmount ,timestampdiff(year,l.StartDate,l.Enddate) as tm
 from  customers c left join loans l
 on c.CUSTID=l.CUSTID;
-
-select timestampdiff(month,StartDate,Enddate) from loans;
