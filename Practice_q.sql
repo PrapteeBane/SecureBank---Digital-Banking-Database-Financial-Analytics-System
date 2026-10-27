@@ -1,0 +1,8 @@
+-- name , balace
+select C.FIRSTNAME,A.BALANCE
+FROM customers C JOIN ACCOUNTS A 
+ON C. CUSTID=A.CUSTID
+order by BALANCE DESC
+LIMIT 5 ;
+SELECT * FROM ACCOUNTS;
+SELECT * FROM customers;

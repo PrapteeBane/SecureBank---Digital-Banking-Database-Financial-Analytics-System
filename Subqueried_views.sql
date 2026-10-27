@@ -38,3 +38,24 @@ group by BranchId;
 from  branches b join  accounts a
 on b.BranchId = a.BranchID;*/     --   solve later
 
+
+select * from customers where AGE >30;
+
+CREATE view Adult_data as
+select * from customers
+where age>30;
+
+select * from Adult_data;
+
+
+-- name , balace
+select C.FIRSTNAME,A.BALANCE
+FROM customers C JOIN ACCOUNTS A 
+ON C. CUSTID=A.CUSTID
+order by BALANCE DESC
+LIMIT 5 ;
+SELECT * FROM ACCOUNTS;
+SELECT * FROM customers;
+
+
+
